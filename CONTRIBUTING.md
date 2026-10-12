@@ -12,7 +12,7 @@ npm run check
 npm run package
 ```
 
-Load `extension/` in Chrome. After editing the worker, manifest or content scripts, reload the extension and the site tabs. Artwork is already checked in. Optional regeneration uses `python3 scripts/artwork.py` with Pillow installed; font availability can change rendering.
+Load `extension/` in Chrome. After editing the worker, manifest or content scripts, reload the extension and the site tabs. Artwork is already checked in. Optional regeneration uses `python3 scripts/artwork.py` with Pillow installed; font availability can change rendering. Regenerate the bilingual decision-flow GIFs and static alternatives with `python3 scripts/animate-flow.py`. This also requires Pillow and suitable English/Chinese fonts; use `FOCUSMUTE_FONT` and `FOCUSMUTE_CJK_FONT` to specify font files if needed.
 
 ## Project map
 

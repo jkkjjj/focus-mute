@@ -45,21 +45,9 @@ English and Chinese patterns are included. The interface is currently in English
 
 ## How it decides
 
-```mermaid
-flowchart TD
-    A[Open a supported page] --> B{Which site?}
-    B -->|Xiaohongshu| C[Mute all audio · keep every post visible]
-    B -->|YouTube| D[Start muted · read current video evidence]
-    D --> E{Explicit block?}
-    E -->|Yes| M[Keep muted]
-    E -->|No| F{Explicit allow?}
-    F -->|Yes| S[Release FocusMute's mute]
-    F -->|No| G{Music or entertainment?}
-    G -->|Yes| M
-    G -->|No| H{Enough teaching evidence?}
-    H -->|Yes| S
-    H -->|No / uncertain| M
-```
+![Animated decision paths: a teaching video allows sound, music stays muted, and Xiaohongshu stays visible and quiet.](docs/assets/decision-flow-en.gif)
+
+A looping illustration of three common paths, not a browser recording. [View the static version](docs/assets/decision-flow-en.png).
 
 This is **inspectable, rule-based classification**, not semantic AI. A supported subject plus teaching evidence can allow sound. Entertainment signals and explicit blocks take precedence over automatic teaching matches. Missing metadata or unavailable player controls keep audio muted. Your own mute setting is preserved.
 
