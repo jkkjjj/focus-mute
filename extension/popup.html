@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FocusMute</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body class="popup">
+    <header>
+      <img src="icons/icon-48.png" width="36" height="36" alt="" />
+      <div>
+        <h1>FocusMute</h1>
+        <p>Keep the lesson. Quiet the noise.</p>
+      </div>
+    </header>
+    <section class="status">
+      <span class="eyebrow">THIS TAB</span>
+      <h2 id="status">Checking…</h2>
+      <p id="reason" aria-live="polite"></p>
+    </section>
+    <div class="platform">
+      <span>YouTube</span><strong>Learning gets sound</strong>
+    </div>
+    <div class="platform">
+      <span>Xiaohongshu</span><strong>Always quiet · posts visible</strong>
+    </div>
+    <div class="actions">
+      <button id="toggle" disabled>Loading…</button
+      ><button id="settings" class="secondary">Settings</button>
+    </div>
+    <p class="footnote">Local rules. No account. No analytics.</p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

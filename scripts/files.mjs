@@ -1,0 +1,21 @@
+// Explicit allowlist: local configs, browser metadata and docs cannot leak into releases.
+export const extensionFiles = [
+  "manifest.json",
+  "background.js",
+  "classifier.js",
+  "rules.js",
+  "state.js",
+  "gate.js",
+  "content.js",
+  "xhs-focus-media.js",
+  "xhs-content.js",
+  "popup.html",
+  "popup.js",
+  "options.html",
+  "options.js",
+  "ui.css",
+  "icons/icon-16.png",
+  "icons/icon-32.png",
+  "icons/icon-48.png",
+  "icons/icon-128.png",
+];

@@ -1,0 +1,188 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #18332e;
+  background: #f5f7f3;
+  font-size: 14px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0 28px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+header p {
+  margin: 4px 0 0;
+  color: #597069;
+}
+h1 {
+  font-size: 25px;
+  letter-spacing: -0.7px;
+  margin: 0;
+}
+h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+p {
+  line-height: 1.65;
+}
+.pill,
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.pill {
+  margin-left: auto;
+  padding: 7px 10px;
+  border: 1px solid #c4d9c9;
+  border-radius: 20px;
+}
+.status {
+  background: #e3eee4;
+  border: 1px solid #c8ddcb;
+  border-radius: 16px;
+  padding: 24px;
+}
+.status p {
+  color: #405c51;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+.cards section,
+details {
+  background: #fff;
+  border: 1px solid #dce4da;
+  padding: 22px;
+  border-radius: 14px;
+}
+.cards p,
+.notice,
+.footnote,
+footer {
+  color: #5a6f65;
+}
+button {
+  border: 1px solid #23523f;
+  background: #23523f;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.1);
+}
+button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+button.secondary {
+  color: #23523f;
+  background: #fff;
+  border-color: #b8cdc0;
+}
+button:focus-visible,
+summary:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #779f65;
+  outline-offset: 3px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+details {
+  margin: 16px 0;
+}
+summary {
+  font-weight: 650;
+  cursor: pointer;
+}
+textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  margin: 9px 0;
+  padding: 14px;
+  border: 1px solid #b8cdc0;
+  border-radius: 8px;
+  font:
+    12px/1.6 ui-monospace,
+    monospace;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+footer {
+  border-top: 1px solid #dce4da;
+  margin-top: 32px;
+  padding: 20px 0;
+  font-size: 12px;
+}
+.footnote {
+  font-size: 12px;
+}
+.popup {
+  width: 370px;
+  padding: 22px;
+}
+.popup header {
+  margin-bottom: 18px;
+}
+.popup h1 {
+  font-size: 22px;
+}
+.popup header p {
+  font-size: 12px;
+}
+.popup .status {
+  padding: 17px;
+}
+.popup .status h2 {
+  font-size: 19px;
+}
+.popup .status p {
+  margin-bottom: 0;
+  font-size: 12px;
+}
+.platform {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 17px;
+  font-size: 12px;
+}
+.platform span {
+  color: #597069;
+}
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  main {
+    margin-top: 24px;
+  }
+}

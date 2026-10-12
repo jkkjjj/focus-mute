@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FocusMute settings</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="icons/icon-48.png" width="44" height="44" alt="" />
+        <div>
+          <h1>FocusMute</h1>
+          <p>Keep the lesson. Quiet the noise.</p>
+        </div>
+        <span class="pill">SETTINGS</span>
+      </header>
+      <section class="status">
+        <h2 id="status">Checking…</h2>
+        <p>
+          YouTube starts muted and allows sound when local rules find teaching
+          evidence. Xiaohongshu stays muted, with every post visible.
+        </p>
+        <button id="toggle" disabled>Loading…</button>
+      </section>
+      <div class="cards">
+        <section>
+          <span class="eyebrow">YOUTUBE</span>
+          <h2>Learn with sound</h2>
+          <p>
+            Titles, channel information, descriptions and available captions
+            help identify instructional videos. Music, entertainment and
+            uncertain results stay muted.
+          </p>
+        </section>
+        <section>
+          <span class="eyebrow">XIAOHONGSHU</span>
+          <h2>Browse in quiet</h2>
+          <p>
+            All audio and video are muted. Posts are never hidden or filtered.
+            Videos can keep playing silently.
+          </p>
+        </section>
+      </div>
+      <p class="notice">
+        This is a rule-based aid, not an AI judgment or a tamper-proof blocker.
+        Classification can be wrong. You can pause FocusMute or edit the YouTube
+        rules below. A video you muted yourself stays muted.
+      </p>
+      <details>
+        <summary>Advanced YouTube rules</summary>
+        <p>
+          Rules use JSON. Add exact video IDs or channel IDs to the allow/block
+          lists. Explicit blocks take priority. Pattern lists use JavaScript
+          regular expressions. Keep a copy before experimenting.
+        </p>
+        <label for="rules">Rules</label
+        ><textarea id="rules" spellcheck="false" rows="20"></textarea>
+        <div class="actions">
+          <button id="save">Save rules</button
+          ><button class="secondary" id="restore">Undo last save</button
+          ><button class="secondary" id="defaults">
+            Load defaults into editor</button
+          ><button class="secondary" id="export">Export JSON</button>
+        </div>
+        <p class="footnote">
+          Loading defaults only changes the editor. Click “Save rules” to apply
+          them.
+        </p>
+      </details>
+      <details>
+        <summary>Current tab diagnostics</summary>
+        <p>
+          These details stay in your browser. Review them before sharing an
+          issue.
+        </p>
+        <button class="secondary" id="refresh">Refresh diagnostics</button>
+        <pre id="tabs">Click Refresh diagnostics.</pre>
+      </details>
+      <p id="result" role="status" aria-live="polite"></p>
+      <footer>
+        FocusMute · Local rules · No account or analytics · MIT licensed
+      </footer>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

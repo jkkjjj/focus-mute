@@ -1,0 +1,16 @@
+{
+  "name": "focus-mute",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first focus controls for YouTube and Xiaohongshu.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check.mjs",
+    "package": "node scripts/package.mjs"
+  }
+}
